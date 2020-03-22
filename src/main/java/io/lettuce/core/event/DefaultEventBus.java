@@ -28,6 +28,7 @@ import reactor.core.scheduler.Scheduler;
  */
 public class DefaultEventBus implements EventBus {
 
+    public static final long DEFAULT_EMIT_INTERVAL = 10;
     private final DirectProcessor<Event> bus;
     private final FluxSink<Event> sink;
     private final Scheduler scheduler;
