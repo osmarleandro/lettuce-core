@@ -108,11 +108,7 @@ public class SslConnectionBuilder extends ConnectionBuilder {
             SSLParameters sslParams = sslOptions.createSSLParameters();
             SslContextBuilder sslContextBuilder = sslOptions.createSslContextBuilder();
 
-            if (verifyPeer) {
-                sslParams.setEndpointIdentificationAlgorithm("HTTPS");
-            } else {
-                sslContextBuilder.trustManager(InsecureTrustManagerFactory.INSTANCE);
-            }
+            extracted(sslParams, sslContextBuilder);
 
             SslContext sslContext = sslContextBuilder.build();
 
@@ -123,5 +119,13 @@ public class SslConnectionBuilder extends ConnectionBuilder {
 
             return sslEngine;
         }
+
+		private void extracted(SSLParameters sslParams, SslContextBuilder sslContextBuilder) {
+			if (verifyPeer) {
+                sslParams.setEndpointIdentificationAlgorithm("HTTPS");
+            } else {
+                sslContextBuilder.trustManager(InsecureTrustManagerFactory.INSTANCE);
+            }
+		}
     }
 }
