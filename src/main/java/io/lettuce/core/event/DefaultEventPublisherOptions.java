@@ -31,7 +31,7 @@ public class DefaultEventPublisherOptions implements EventPublisherOptions, Extr
     public static final TimeUnit DEFAULT_EMIT_INTERVAL_UNIT = TimeUnit.MINUTES;
     public static final Duration DEFAULT_EMIT_INTERVAL_DURATION = Duration.ofMinutes(DefaultEventBus.DEFAULT_EMIT_INTERVAL);
 
-    private static final DefaultEventPublisherOptions DISABLED = new Builder().eventEmitInterval(Duration.ZERO).build();
+    public static final DefaultEventPublisherOptions DISABLED = new Builder().eventEmitInterval(Duration.ZERO).build();
 
     private final Duration eventEmitInterval;
 
