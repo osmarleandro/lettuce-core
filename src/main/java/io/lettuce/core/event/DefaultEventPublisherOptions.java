@@ -26,7 +26,7 @@ import io.lettuce.core.metrics.CommandLatencyCollectorOptions;
  *
  * @author Mark Paluch
  */
-public class DefaultEventPublisherOptions implements EventPublisherOptions {
+public class DefaultEventPublisherOptions implements EventPublisherOptions, ExtractedInterface {
 
     public static final long DEFAULT_EMIT_INTERVAL = 10;
     public static final TimeUnit DEFAULT_EMIT_INTERVAL_UNIT = TimeUnit.MINUTES;
