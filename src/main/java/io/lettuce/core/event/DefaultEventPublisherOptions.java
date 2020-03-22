@@ -35,7 +35,7 @@ public class DefaultEventPublisherOptions implements EventPublisherOptions, Extr
     public static final TimeUnit DEFAULT_EMIT_INTERVAL_UNIT = TimeUnit.MINUTES;
     public static final Duration DEFAULT_EMIT_INTERVAL_DURATION = Duration.ofMinutes(DefaultEventBus.DEFAULT_EMIT_INTERVAL);
 
-    private static final DefaultEventPublisherOptions DISABLED = new Builder().eventEmitInterval(Duration.ZERO).build();
+    static final DefaultEventPublisherOptions DISABLED = new Builder().eventEmitInterval(Duration.ZERO).build();
 
     private final Duration eventEmitInterval;
 
@@ -123,11 +123,12 @@ public class DefaultEventPublisherOptions implements EventPublisherOptions, Extr
     }
 
     /**
-     * Create a disabled {@link DefaultEventPublisherOptions} using default settings.
-     *
-     * @return a new instance of a default {@link DefaultEventPublisherOptions} instance with disabled event emission
-     */
-    public static DefaultEventPublisherOptions disabled() {
-        return DISABLED;
-    }
+	 * Create a disabled {@link DefaultEventPublisherOptions} using default settings.
+	 *
+	 * @return a new instance of a default {@link DefaultEventPublisherOptions} instance with disabled event emission
+	 * @deprecated Use {@link DefaultEventBus#disabled()} instead
+	 */
+	public static DefaultEventPublisherOptions disabled() {
+		return DefaultEventBus.disabled();
+	}
 }

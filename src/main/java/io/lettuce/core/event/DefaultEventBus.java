@@ -48,4 +48,13 @@ public class DefaultEventBus implements EventBus {
     public void publish(Event event) {
         sink.next(event);
     }
+
+	/**
+	 * Create a disabled {@link DefaultEventPublisherOptions} using default settings.
+	 *
+	 * @return a new instance of a default {@link DefaultEventPublisherOptions} instance with disabled event emission
+	 */
+	public static DefaultEventPublisherOptions disabled() {
+	    return DefaultEventPublisherOptions.DISABLED;
+	}
 }

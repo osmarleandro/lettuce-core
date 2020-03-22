@@ -38,7 +38,7 @@ class DefaultEventPublisherOptionsUnitTests {
     @Test
     void testDisabled() {
 
-        DefaultEventPublisherOptions sut = DefaultEventPublisherOptions.disabled();
+        DefaultEventPublisherOptions sut = DefaultEventBus.disabled();
 
         assertThat(sut.eventEmitInterval()).isEqualTo(Duration.ZERO);
     }
