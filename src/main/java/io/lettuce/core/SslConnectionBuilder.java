@@ -108,7 +108,11 @@ public class SslConnectionBuilder extends ConnectionBuilder {
             SSLParameters sslParams = sslOptions.createSSLParameters();
             SslContextBuilder sslContextBuilder = sslOptions.createSslContextBuilder();
 
-            extracted(sslParams, sslContextBuilder);
+            if (verifyPeer) {
+			    sslParams.setEndpointIdentificationAlgorithm("HTTPS");
+			} else {
+			    sslContextBuilder.trustManager(InsecureTrustManagerFactory.INSTANCE);
+			}
 
             SslContext sslContext = sslContextBuilder.build();
 
