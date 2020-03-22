@@ -16,7 +16,6 @@
 package io.lettuce.core;
 
 import java.io.IOException;
-import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 import java.security.GeneralSecurityException;
 import java.util.List;
@@ -66,18 +65,6 @@ public class SslConnectionBuilder extends ConnectionBuilder {
     public ChannelInitializer<Channel> build(SocketAddress socketAddress) {
         return new SslChannelInitializer(this::buildHandlers, toHostAndPort(socketAddress), redisURI.isVerifyPeer(),
                 redisURI.isStartTls(), clientResources(), clientOptions().getSslOptions());
-    }
-
-    static HostAndPort toHostAndPort(SocketAddress socketAddress) {
-
-        if (socketAddress instanceof InetSocketAddress) {
-
-            InetSocketAddress isa = (InetSocketAddress) socketAddress;
-
-            return HostAndPort.of(isa.getHostString(), isa.getPort());
-        }
-
-        return null;
     }
 
     static class SslChannelInitializer extends io.netty.channel.ChannelInitializer<Channel> {

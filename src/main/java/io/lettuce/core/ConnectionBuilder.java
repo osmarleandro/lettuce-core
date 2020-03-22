@@ -15,6 +15,7 @@
  */
 package io.lettuce.core;
 
+import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 import java.time.Duration;
 import java.util.ArrayList;
@@ -22,6 +23,7 @@ import java.util.List;
 import java.util.function.Supplier;
 
 import reactor.core.publisher.Mono;
+import io.lettuce.core.internal.HostAndPort;
 import io.lettuce.core.internal.LettuceAssert;
 import io.lettuce.core.protocol.*;
 import io.lettuce.core.resource.ClientResources;
@@ -58,7 +60,19 @@ public class ConnectionBuilder {
         return new ConnectionBuilder();
     }
 
-    /**
+    protected static HostAndPort toHostAndPort(SocketAddress socketAddress) {
+	
+	    if (socketAddress instanceof InetSocketAddress) {
+	
+	        InetSocketAddress isa = (InetSocketAddress) socketAddress;
+	
+	        return HostAndPort.of(isa.getHostString(), isa.getPort());
+	    }
+	
+	    return null;
+	}
+
+	/**
      * Apply settings from {@link RedisURI}
      *
      * @param redisURI
