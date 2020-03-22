@@ -19,7 +19,7 @@ import static io.lettuce.core.ConnectionEventTrigger.local;
 import static io.lettuce.core.ConnectionEventTrigger.remote;
 
 import io.lettuce.core.event.EventBus;
-import io.lettuce.core.event.connection.ConnectedEvent;
+import io.lettuce.core.event.connection.ConnectedEventRenamed;
 import io.lettuce.core.event.connection.DisconnectedEvent;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
@@ -45,7 +45,7 @@ class ChannelGroupListener extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        eventBus.publish(new ConnectedEvent(local(ctx), remote(ctx)));
+        eventBus.publish(new ConnectedEventRenamed(local(ctx), remote(ctx)));
         channels.add(ctx.channel());
         super.channelActive(ctx);
     }

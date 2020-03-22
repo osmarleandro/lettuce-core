@@ -23,8 +23,8 @@ import java.net.SocketAddress;
  * @author Mark Paluch
  * @since 3.4
  */
-public class ConnectedEvent extends ConnectionEventSupport {
-    public ConnectedEvent(SocketAddress local, SocketAddress remote) {
+public class ConnectedEventRenamed extends ConnectionEventSupport {
+    public ConnectedEventRenamed(SocketAddress local, SocketAddress remote) {
         super(local, remote);
     }
 }
