@@ -32,7 +32,7 @@ import io.lettuce.core.cluster.models.partitions.Partitions;
 import io.lettuce.core.cluster.models.partitions.RedisClusterNode;
 import io.lettuce.core.cluster.topology.TopologyComparators.SortAction;
 import io.lettuce.core.codec.StringCodec;
-import io.lettuce.core.internal.Futures;
+import io.lettuce.core.Futures;
 import io.lettuce.core.resource.ClientResources;
 import io.netty.util.Timeout;
 import io.netty.util.concurrent.EventExecutorGroup;

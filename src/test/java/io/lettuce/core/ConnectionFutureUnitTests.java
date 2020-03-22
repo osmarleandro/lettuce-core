@@ -23,8 +23,6 @@ import java.util.concurrent.CompletionException;
 
 import org.junit.jupiter.api.Test;
 
-import io.lettuce.core.internal.Futures;
-
 /**
  * @author Mark Paluch
  */

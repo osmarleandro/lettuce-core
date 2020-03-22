@@ -29,7 +29,7 @@ import org.junit.jupiter.api.Test;
 import io.lettuce.core.*;
 import io.lettuce.core.codec.RedisCodec;
 import io.lettuce.core.codec.StringCodec;
-import io.lettuce.core.internal.Futures;
+import io.lettuce.core.Futures;
 import io.lettuce.core.output.CommandOutput;
 import io.lettuce.core.output.StatusOutput;
 import io.lettuce.test.TestFutures;

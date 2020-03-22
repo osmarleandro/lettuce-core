@@ -42,7 +42,7 @@ abstract class CompletableEventLatchSupport<T, V> {
     private static final int GATE_OPEN = 0;
     private static final int GATE_CLOSED = 1;
 
-    private final int expectedCount;
+    protected final int expectedCount;
     private final CompletableFuture<V> selfFuture = new CompletableFuture<>();
 
     private volatile ScheduledFuture<?> timeoutScheduleFuture;
@@ -61,10 +61,6 @@ abstract class CompletableEventLatchSupport<T, V> {
      */
     public CompletableEventLatchSupport(int expectedCount) {
         this.expectedCount = expectedCount;
-    }
-
-    public final int getExpectedCount() {
-        return expectedCount;
     }
 
     /**

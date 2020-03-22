@@ -13,13 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.lettuce.core.internal;
+package io.lettuce.core;
 
 import java.time.Duration;
 import java.util.Collection;
 import java.util.concurrent.*;
 
 import io.lettuce.core.*;
+import io.lettuce.core.internal.LettuceAssert;
 import io.netty.channel.ChannelFuture;
 
 /**

@@ -28,7 +28,7 @@ import io.lettuce.core.RedisURI;
 import io.lettuce.core.api.StatefulRedisConnection;
 import io.lettuce.core.codec.StringCodec;
 import io.lettuce.core.internal.AsyncCloseable;
-import io.lettuce.core.internal.Futures;
+import io.lettuce.core.Futures;
 import io.lettuce.core.models.role.RedisNodeDescription;
 import io.lettuce.core.output.StatusOutput;
 import io.lettuce.core.protocol.Command;
@@ -161,5 +161,9 @@ class Connections extends CompletableEventLatchSupport<Tuple2<RedisURI, Stateful
         }
 
         return Futures.allOf(close);
+    }
+
+    public final int getExpectedCount() {
+        return expectedCount;
     }
 }

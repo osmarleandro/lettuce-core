@@ -36,7 +36,7 @@ import io.lettuce.core.dynamic.batch.BatchException;
 import io.lettuce.core.dynamic.batch.BatchExecutor;
 import io.lettuce.core.dynamic.batch.BatchSize;
 import io.lettuce.core.dynamic.batch.CommandBatching;
-import io.lettuce.core.internal.Futures;
+import io.lettuce.core.Futures;
 import io.lettuce.test.LettuceExtension;
 import io.lettuce.test.TestFutures;
 

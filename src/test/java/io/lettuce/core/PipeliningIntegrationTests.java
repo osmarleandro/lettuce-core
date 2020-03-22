@@ -30,7 +30,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 import io.lettuce.core.api.StatefulRedisConnection;
 import io.lettuce.core.api.async.RedisAsyncCommands;
-import io.lettuce.core.internal.Futures;
 import io.lettuce.test.LettuceExtension;
 
 /**

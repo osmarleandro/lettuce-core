@@ -15,6 +15,8 @@
  */
 package io.lettuce.core.internal;
 
+import io.lettuce.core.Futures;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
