@@ -118,12 +118,4 @@ public class DefaultEventPublisherOptions implements EventPublisherOptions, Extr
         return new Builder().build();
     }
 
-    /**
-     * Create a disabled {@link DefaultEventPublisherOptions} using default settings.
-     *
-     * @return a new instance of a default {@link DefaultEventPublisherOptions} instance with disabled event emission
-     */
-    public static DefaultEventPublisherOptions disabled() {
-        return DISABLED;
-    }
 }
