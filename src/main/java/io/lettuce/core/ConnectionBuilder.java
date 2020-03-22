@@ -54,9 +54,7 @@ public class ConnectionBuilder {
     private ConnectionInitializer connectionInitializer;
     private ReconnectionListener reconnectionListener = ReconnectionListener.NO_OP;
     private ConnectionWatchdog connectionWatchdog;
-	protected RedisURI redisURI;
-
-    public static ConnectionBuilder connectionBuilder() {
+	public static ConnectionBuilder connectionBuilder() {
         return new ConnectionBuilder();
     }
 

@@ -44,7 +44,9 @@ import io.netty.handler.ssl.util.InsecureTrustManagerFactory;
  */
 public class SslConnectionBuilder extends ConnectionBuilder {
 
-    public ConnectionBuilder ssl(RedisURI redisURI) {
+    protected RedisURI redisURI;
+
+	public ConnectionBuilder ssl(RedisURI redisURI) {
         this.redisURI = redisURI;
         return this;
     }
