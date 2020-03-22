@@ -39,7 +39,7 @@ public class AdaptiveRefreshTriggeredEvent implements Event {
     /**
      * Schedules a new topology refresh. Refresh happens asynchronously.
      */
-    public void scheduleRefresh() {
+    public void scheduleRefreshRenamed() {
         topologyRefreshScheduler.run();
     }
 

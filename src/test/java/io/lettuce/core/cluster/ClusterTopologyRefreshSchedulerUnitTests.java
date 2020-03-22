@@ -268,7 +268,7 @@ class ClusterTopologyRefreshSchedulerUnitTests {
 
         AdaptiveRefreshTriggeredEvent capture = captor.getValue();
 
-        capture.scheduleRefresh();
+        capture.scheduleRefreshRenamed();
         verify(eventExecutors, times(2)).submit(any(Runnable.class));
     }
 
