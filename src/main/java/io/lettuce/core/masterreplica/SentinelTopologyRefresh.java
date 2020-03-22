@@ -26,11 +26,11 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 import io.lettuce.core.ConnectionFuture;
+import io.lettuce.core.Futures;
 import io.lettuce.core.RedisClient;
 import io.lettuce.core.RedisURI;
 import io.lettuce.core.codec.StringCodec;
 import io.lettuce.core.internal.AsyncCloseable;
-import io.lettuce.core.internal.Futures;
 import io.lettuce.core.internal.LettuceLists;
 import io.lettuce.core.pubsub.RedisPubSubAdapter;
 import io.lettuce.core.pubsub.StatefulRedisPubSubConnection;

@@ -22,7 +22,6 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
 
 import io.lettuce.core.codec.StringCodec;
-import io.lettuce.core.internal.Futures;
 import io.lettuce.core.protocol.AsyncCommand;
 import io.lettuce.core.protocol.Command;
 import io.lettuce.core.protocol.ConnectionInitializer;

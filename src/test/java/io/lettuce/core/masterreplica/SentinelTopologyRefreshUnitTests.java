@@ -39,11 +39,11 @@ import org.mockito.quality.Strictness;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import io.lettuce.core.ConnectionFuture;
+import io.lettuce.core.Futures;
 import io.lettuce.core.RedisClient;
 import io.lettuce.core.RedisConnectionException;
 import io.lettuce.core.RedisURI;
 import io.lettuce.core.codec.StringCodec;
-import io.lettuce.core.internal.Futures;
 import io.lettuce.core.masterreplica.SentinelTopologyRefresh;
 import io.lettuce.core.protocol.AsyncCommand;
 import io.lettuce.core.protocol.Command;

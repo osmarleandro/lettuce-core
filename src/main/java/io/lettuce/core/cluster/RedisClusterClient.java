@@ -41,7 +41,6 @@ import io.lettuce.core.cluster.topology.NodeConnectionFactory;
 import io.lettuce.core.cluster.topology.TopologyComparators;
 import io.lettuce.core.codec.RedisCodec;
 import io.lettuce.core.codec.StringCodec;
-import io.lettuce.core.internal.Futures;
 import io.lettuce.core.internal.LettuceAssert;
 import io.lettuce.core.internal.LettuceLists;
 import io.lettuce.core.models.command.CommandDetailParser;

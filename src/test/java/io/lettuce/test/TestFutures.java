@@ -23,9 +23,9 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
 import java.util.concurrent.Future;
 
+import io.lettuce.core.Futures;
 import io.lettuce.core.RedisFuture;
 import io.lettuce.core.cluster.api.async.AsyncExecutions;
-import io.lettuce.core.internal.Futures;
 
 /**
  * Utility methods to synchronize and create futures.
@@ -80,7 +80,7 @@ public class TestFutures {
      */
     public static boolean awaitOrTimeout(Collection<? extends Future<?>> futures) {
 
-        if (!io.lettuce.core.internal.Futures.awaitAll(TIMEOUT, futures.toArray(new Future[0]))) {
+        if (!io.lettuce.core.Futures.awaitAll(TIMEOUT, futures.toArray(new Future[0]))) {
             throw new IllegalStateException("Future timeout");
         }
 

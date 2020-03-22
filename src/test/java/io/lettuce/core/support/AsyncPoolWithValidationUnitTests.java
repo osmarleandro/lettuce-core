@@ -15,7 +15,7 @@
  */
 package io.lettuce.core.support;
 
-import static io.lettuce.core.internal.Futures.failed;
+import static io.lettuce.core.Futures.failed;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;

@@ -28,7 +28,6 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import reactor.core.publisher.Mono;
 import io.lettuce.core.Transports.NativeTransports;
 import io.lettuce.core.internal.AsyncCloseable;
-import io.lettuce.core.internal.Futures;
 import io.lettuce.core.internal.LettuceAssert;
 import io.lettuce.core.protocol.ConnectionWatchdog;
 import io.lettuce.core.protocol.RedisHandshakeHandler;

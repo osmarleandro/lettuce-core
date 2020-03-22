@@ -21,11 +21,11 @@ import java.util.concurrent.CompletionStage;
 import java.util.concurrent.ExecutionException;
 
 import io.lettuce.core.ConnectionFuture;
+import io.lettuce.core.Futures;
 import io.lettuce.core.RedisClient;
 import io.lettuce.core.RedisConnectionException;
 import io.lettuce.core.RedisURI;
 import io.lettuce.core.codec.RedisCodec;
-import io.lettuce.core.internal.Futures;
 import io.lettuce.core.internal.LettuceAssert;
 import io.lettuce.core.internal.LettuceLists;
 import io.netty.util.internal.logging.InternalLogger;

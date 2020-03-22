@@ -19,11 +19,11 @@ import java.time.Duration;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
+import io.lettuce.core.Futures;
 import io.lettuce.core.LettuceFutures;
 import io.lettuce.core.api.StatefulConnection;
 import io.lettuce.core.dynamic.domain.Timeout;
 import io.lettuce.core.dynamic.parameter.ExecutionSpecificParameters;
-import io.lettuce.core.internal.Futures;
 import io.lettuce.core.protocol.AsyncCommand;
 import io.lettuce.core.protocol.RedisCommand;
 

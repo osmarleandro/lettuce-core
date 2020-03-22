@@ -23,12 +23,12 @@ import java.util.concurrent.ScheduledExecutorService;
 
 import reactor.core.publisher.Mono;
 import reactor.util.function.Tuple2;
+import io.lettuce.core.Futures;
 import io.lettuce.core.RedisConnectionException;
 import io.lettuce.core.RedisURI;
 import io.lettuce.core.api.StatefulRedisConnection;
 import io.lettuce.core.codec.StringCodec;
 import io.lettuce.core.internal.AsyncCloseable;
-import io.lettuce.core.internal.Futures;
 import io.lettuce.core.models.role.RedisNodeDescription;
 import io.lettuce.core.output.StatusOutput;
 import io.lettuce.core.protocol.Command;

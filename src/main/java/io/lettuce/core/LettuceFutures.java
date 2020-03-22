@@ -19,8 +19,6 @@ import java.time.Duration;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
-import io.lettuce.core.internal.Futures;
-
 /**
  * Utility to {@link #awaitAll(long, TimeUnit, Future[])} futures until they are done and to synchronize future execution using
  * {@link #awaitOrCancel(RedisFuture, long, TimeUnit)}.

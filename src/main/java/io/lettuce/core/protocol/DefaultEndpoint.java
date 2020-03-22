@@ -27,7 +27,6 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 import io.lettuce.core.*;
-import io.lettuce.core.internal.Futures;
 import io.lettuce.core.internal.LettuceAssert;
 import io.lettuce.core.internal.LettuceFactories;
 import io.lettuce.core.resource.ClientResources;

@@ -22,13 +22,13 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
 import reactor.core.scheduler.Schedulers;
+import io.lettuce.core.Futures;
 import io.lettuce.core.event.DefaultEventBus;
 import io.lettuce.core.event.DefaultEventPublisherOptions;
 import io.lettuce.core.event.EventBus;
 import io.lettuce.core.event.EventPublisherOptions;
 import io.lettuce.core.event.metrics.DefaultCommandLatencyEventPublisher;
 import io.lettuce.core.event.metrics.MetricEventPublisher;
-import io.lettuce.core.internal.Futures;
 import io.lettuce.core.internal.LettuceAssert;
 import io.lettuce.core.internal.LettuceLists;
 import io.lettuce.core.metrics.CommandLatencyCollector;

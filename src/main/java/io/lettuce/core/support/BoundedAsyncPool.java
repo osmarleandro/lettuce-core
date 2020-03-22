@@ -23,7 +23,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import io.lettuce.core.internal.Futures;
+import io.lettuce.core.Futures;
 import io.lettuce.core.internal.LettuceAssert;
 
 /**

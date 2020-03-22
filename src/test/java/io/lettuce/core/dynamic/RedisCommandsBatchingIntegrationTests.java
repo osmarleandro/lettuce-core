@@ -26,6 +26,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
+import io.lettuce.core.Futures;
 import io.lettuce.core.RedisCommandExecutionException;
 import io.lettuce.core.RedisFuture;
 import io.lettuce.core.TestSupport;
@@ -36,7 +37,6 @@ import io.lettuce.core.dynamic.batch.BatchException;
 import io.lettuce.core.dynamic.batch.BatchExecutor;
 import io.lettuce.core.dynamic.batch.BatchSize;
 import io.lettuce.core.dynamic.batch.CommandBatching;
-import io.lettuce.core.internal.Futures;
 import io.lettuce.test.LettuceExtension;
 import io.lettuce.test.TestFutures;
 

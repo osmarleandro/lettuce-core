@@ -24,6 +24,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Predicate;
 
+import io.lettuce.core.Futures;
 import io.lettuce.core.RedisFuture;
 import io.lettuce.core.api.StatefulConnection;
 import io.lettuce.core.api.StatefulRedisConnection;
@@ -34,7 +35,6 @@ import io.lettuce.core.cluster.api.sync.RedisClusterCommands;
 import io.lettuce.core.cluster.models.partitions.RedisClusterNode;
 import io.lettuce.core.internal.AbstractInvocationHandler;
 import io.lettuce.core.internal.DefaultMethods;
-import io.lettuce.core.internal.Futures;
 import io.lettuce.core.internal.TimeoutProvider;
 import io.lettuce.core.protocol.RedisCommand;
 

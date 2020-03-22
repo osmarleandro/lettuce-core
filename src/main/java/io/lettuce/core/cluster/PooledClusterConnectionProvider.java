@@ -34,7 +34,6 @@ import io.lettuce.core.cluster.models.partitions.Partitions;
 import io.lettuce.core.cluster.models.partitions.RedisClusterNode;
 import io.lettuce.core.codec.RedisCodec;
 import io.lettuce.core.internal.AsyncConnectionProvider;
-import io.lettuce.core.internal.Futures;
 import io.lettuce.core.internal.HostAndPort;
 import io.lettuce.core.internal.LettuceAssert;
 import io.lettuce.core.models.role.RedisInstance;
