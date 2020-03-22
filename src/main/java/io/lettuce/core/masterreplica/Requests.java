@@ -90,4 +90,8 @@ class Requests extends
     protected TimedAsyncCommand<String, String, String> getRequest(RedisURI redisURI) {
         return rawViews.get(redisURI);
     }
+
+	public final int getExpectedCount() {
+	    return expectedCount;
+	}
 }

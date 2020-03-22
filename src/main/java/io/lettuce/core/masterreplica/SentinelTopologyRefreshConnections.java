@@ -62,4 +62,8 @@ class SentinelTopologyRefreshConnections extends
             emission.success(this);
         }
     }
+
+	public final int getExpectedCount() {
+	    return expectedCount;
+	}
 }

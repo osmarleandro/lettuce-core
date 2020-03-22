@@ -162,4 +162,8 @@ class Connections extends CompletableEventLatchSupport<Tuple2<RedisURI, Stateful
 
         return Futures.allOf(close);
     }
+
+	public final int getExpectedCount() {
+	    return expectedCount;
+	}
 }
