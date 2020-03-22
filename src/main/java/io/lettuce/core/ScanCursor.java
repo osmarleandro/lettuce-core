@@ -23,7 +23,7 @@ import io.lettuce.core.internal.LettuceAssert;
  * @author Mark Paluch
  * @since 3.0
  */
-public class ScanCursor {
+public class ScanCursor extends ExtractedSuperclass {
 
     /**
      * Finished cursor.
