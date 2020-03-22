@@ -39,6 +39,7 @@ import io.netty.util.Timer;
  */
 public class ConnectionBuilder {
 
+    protected RedisURI redisURI;
     private Mono<SocketAddress> socketAddressSupplier;
     private ConnectionEvents connectionEvents;
     private RedisChannelHandler<?, ?> connection;
