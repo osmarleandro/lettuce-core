@@ -31,6 +31,7 @@ public class DefaultEventBus implements EventBus {
     private final DirectProcessor<Event> bus;
     private final FluxSink<Event> sink;
     private final Scheduler scheduler;
+	public static final long DEFAULT_EMIT_INTERVAL = 10;
 
     public DefaultEventBus(Scheduler scheduler) {
         this.bus = DirectProcessor.create();
